@@ -1,9 +1,9 @@
 #ifndef INPUT_H
 #define INPUT_h
 
-char newGame(int gamesPlayed);
+char newGame();
 
-char* enterData(int turns);
+char* enterData();
 
 
 #endif

@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "gameInput.h"
+#include "globals.h"
 
-char newGame(int gamesPlayed)
+char newGame()
 {
     char key = ' ';
     if(gamesPlayed == 0)
@@ -48,7 +49,7 @@ char newGame(int gamesPlayed)
 
 }
 
-char* enterData(int turns)
+char* enterData()
 {
 
     int dataSize = 10; //actually expecting 5 characters, using 10 incase user types a few more than required

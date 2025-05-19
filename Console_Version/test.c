@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include "globals.h"
 #include "gameInput.h"
 
 
@@ -17,10 +18,10 @@ int main(int argc, char* argv[])
             gamesPlayed = argv[1][0] - '0';
     }
     printf("The number of games played is: %d \n", gamesPlayed);
-    char test = newGame(gamesPlayed);
+    char test = newGame();
     //*/
 
-    char * data = enterData(1);
+    char * data = enterData();
     printf("The recieved data is: %s", data);
 
     return 0;
