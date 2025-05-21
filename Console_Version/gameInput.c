@@ -54,6 +54,14 @@ char* enterData()
 
     int dataSize = 10; //actually expecting 5 characters, using 10 incase user types a few more than required
     char * data = malloc(dataSize*sizeof(char));
+    
+    //Set all values to NULL
+    for(int i = 0; i < dataSize; i++)
+    {
+        data[i] = '\0';
+    }
+
+
     if(data == NULL)
     {
         printf("Memory allocatin failed");
