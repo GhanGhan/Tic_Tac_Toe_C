@@ -46,9 +46,9 @@ int main(int argc, char* argv[])
     bool good = validateData(board, data, &mark, &row, &col);
     
     if(good)
-        printf("Data inputted and parsed correctly\n");
+        printf("Data is valid and entered onto the board\n");
     else // !good
-        printf("Data NOT inputted or parsed correclty\n");
+        printf("Data is NOT been validated will not be entered onto the board\n");
 
     printf("The mark is %c, the row is %d, the column is %d. \n", mark, row, col);
 

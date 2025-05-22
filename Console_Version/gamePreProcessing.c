@@ -31,14 +31,14 @@ bool parseData(char* playerInput, char* mark, int* row, int* col)
     //Check that index 1 and 3 are spaces
     if(playerInput[1] != ' ' || playerInput[3] != ' ')
     {
-        printf("The 2nd and 4th entries need to be spaces");
+        printf("The 2nd and 4th entries need to be spaces.\n");
         return false;
     }
 
     //Check that index 2 and 4 are digits
     if(!isdigit(playerInput[2]) || !isdigit(playerInput[4]))
     {
-        printf("The 3rd and 5th entries need to be numerical digits");
+        printf("The 3rd and 5th entries need to be numerical digits.\n");
         return false;
     }
 
@@ -60,7 +60,7 @@ bool validateData(char board[3][3], char* playerInput, char* mark, int* row, int
     {
         if(*mark != 'X')
         {
-            printf("It is Player 1's turn, for input to be valid, the mark must be \"X\"");
+            printf("It is Player 1's turn, for input to be valid, the mark must be \"X\"\n");
             return false;
         }
     }
@@ -68,7 +68,7 @@ bool validateData(char board[3][3], char* playerInput, char* mark, int* row, int
     {
         if(*mark != 'O')
         {
-            printf("It is Player 0's turn, for input to be valid, the mark must be \"X\"");
+            printf("It is Player 0's turn, for input to be valid, the mark must be \"X\"\n");
             return false;
         }
     }

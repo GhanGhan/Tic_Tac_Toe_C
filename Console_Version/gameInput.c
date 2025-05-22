@@ -64,7 +64,7 @@ char* enterData()
 
     if(data == NULL)
     {
-        printf("Memory allocatin failed");
+        printf("Memory allocatin failed\n");
         exit(1);
     }
     // placing getChar after scanf prevents fgets from reading the left-over \n character in the standard input buffer stdin
