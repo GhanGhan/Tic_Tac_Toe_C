@@ -48,3 +48,56 @@ bool parseData(char* playerInput, char* mark, int* row, int* col)
 
     return true;
 }
+
+bool validateData(char board[3][3], char* playerInput, char* mark, int* row, int* col)
+{
+    bool parsed = parseData(playerInput, mark, row, col);
+    if(!parsed)
+        return false;
+
+    // Validate the Player mMark
+    if(turns % 2 == 0)
+    {
+        if(*mark != 'X')
+        {
+            printf("It is Player 1's turn, for input to be valid, the mark must be \"X\"");
+            return false;
+        }
+    }
+    else //if it is Player 2's turn, mark should be 'O'
+    {
+        if(*mark != 'O')
+        {
+            printf("It is Player 0's turn, for input to be valid, the mark must be \"X\"");
+            return false;
+        }
+    }
+
+    //Validate the row and column Part A
+    if(*row < 0 || *row > 2)
+    {
+        printf("The row input value must be between 0 and 2 inclusive.\n");
+        return false;
+    }
+
+    if(*col < 0 || *col > 2)
+    {
+        printf("The column input value must be between 0 and 2 inclusive.\n");
+        return false;
+    }
+
+    //Validate the row and column Part B
+    if(board[*row][*col] == ' ') //Location has not been filled
+    {
+        board[*row][*col] = *mark;
+        printf("Entry has been added to the board!\n");
+        return true;
+    }
+    else //Location has already been filled
+    {
+        printf("Entry has already beenn filled, pick a different one!!! \n");
+        return false;
+    }
+    
+
+}

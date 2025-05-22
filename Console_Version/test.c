@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
     char mark;
     int row, col;
 
-    bool good = parseData(data, &mark, &row, &col);
+    bool good = validateData(board, data, &mark, &row, &col);
     
     if(good)
         printf("Data inputted and parsed correctly\n");
@@ -52,6 +52,11 @@ int main(int argc, char* argv[])
 
     printf("The mark is %c, the row is %d, the column is %d. \n", mark, row, col);
 
+    //
+    for(int i = 0; i < SIZE; i++)
+    {
+        printf("[%c][%c][%c]\n", board[i][0], board[i][1], board[i][2]);
+    }
 
 
     return 0;

@@ -4,6 +4,8 @@
 
 bool parseData(char* playerInput, char* mark, int* row, int* col);
 
+bool validateData(char board[3][3], char* playerInput, char* mark, int* row, int* col);
+
 
 
 
