@@ -3,13 +3,13 @@
 #include <stdbool.h>
 
 bool checkStatemate(char board[3][3]);
-bool checkWinner(char board[3][3], int row, int column);
+bool checkWinner(char board[3][3], int row, int column, int turnNumber);
 bool checkRow(char board[3][3], char mark, int row);
 bool checkColumn(char board[3][3], char mark, int column);
 bool checkDiagnol(char board[3][3], char mark, int row, int column);
 
 void findRemainingCell(char board[3][3], int* finalRow, int* finalColumn);
-void unMarkCell(char board[3][3], char mark);
+void unMarkCell(char board[3][3], char tempMark);
 
 
 
