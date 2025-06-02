@@ -1,8 +1,9 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <ctype.h>
 #include "gamePreProcessing.h"
 #include "globals.h"
-#include <stdbool.h>
-#include <stdio.h>
-#include <ctype.h>
+
 
 
 
