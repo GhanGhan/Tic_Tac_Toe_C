@@ -19,6 +19,8 @@ bool checkWinner(char board[3][3], int row, int column, int turnNumber)
         gameWon = true;
     else if(checkColumn(board, mark, column))
         gameWon = true;
+    else if(checkDiagnol(board, mark, row, column))
+        gameWon = true;
     
 
     if(gameWon == true)
