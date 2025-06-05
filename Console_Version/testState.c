@@ -115,6 +115,19 @@ int main(int argc, char* argv[])
 
             break;
 
+        case '7':
+
+            char board7[SIZE][SIZE] = {
+                {'X','X','X'},
+                {'O',' ',' '},              // PLAYER 1 victory
+                {'O',' ',' '},
+            };
+            turns = 4;            
+            row = 0; col = 0;
+            testStateFTS(board7, row, col);
+
+            break;
+
         default:
 
             printf("Invalid Input");
