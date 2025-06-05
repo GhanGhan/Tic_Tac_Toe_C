@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "globals.h": "c",
-        "gamepreprocessing.h": "c"
+        "gamepreprocessing.h": "c",
+        "gameoutput.h": "c"
     }
 }
