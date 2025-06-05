@@ -16,11 +16,20 @@ bool checkWinner(char board[3][3], int row, int column, int turnNumber)
     bool gameWon = false;
 
     if(checkRow(board, mark, row))
+    {
         gameWon = true;
+        printf("Row Win\n");
+    }
     else if(checkColumn(board, mark, column))
+    {
         gameWon = true;
+        printf("Column Win\n");
+    }
     else if(checkDiagnol(board, mark, row, column))
+    {
         gameWon = true;
+        printf("Diagnol Win\n");
+    }
     
 
     if(gameWon == true)
@@ -73,9 +82,11 @@ bool checkDiagnol(char board[3][3], char mark, int row, int column)
             {
                 if(board[k][k] != mark)
                     winner = false;
-                if(winner)
-                    return winner;
+                
             }
+            if(winner)
+                return winner;
+            //printf(" topleft - bottom right Winner value is %d \n", winner);
         }
 
         if(sum == 2 || (winner == false && row == 1 && column == 1))    // bottom left to top right, and winner hasn't been declared
@@ -107,14 +118,26 @@ bool checkStatemate(char board[3][3])
 
     if(turns == 8) // in the process of completing the 9th round, if the winner isn't declared, game has to be a tie
         staleMate = true;
-    if(turns == 7) // there is one cell left
+    if(turns == 7) // there is one cell left - MIGHT DECIDE TO LET THEM PLAY IT OUT IN THE FUTURE
     {
         char mark = 'X'; //It will always be Player 1s turn
         findRemainingCell(testBoard, &finalRow, &finalColumn);
         testBoard[finalRow][finalColumn] = mark;
+        //
+        /*
+        printf("Print testboard--------------------\n");
+        for(int i = 0; i < SIZE; i++)
+        {
+            printf("[%c][%c][%c]\n", testBoard[i][0], testBoard[i][1], testBoard[i][2]);
+        }
+        //
         staleMate = !checkWinner(testBoard, finalRow, finalColumn, turns + 1);
+        printf("Final row: %d, Final Column: %d\n", finalRow, finalColumn);
+        printf("Stalemate value is %d \n", staleMate);
+        printf("checkWinner value is %d \n", checkWinner(testBoard, finalRow, finalColumn, turns + 1));
+        */
     }
-    if(turns == 6)  // thre are two cells left
+    if(turns == 6)  // thre are two cells left - 
     {
         int rowOptions[] = {-1, -1};
         int colOptions[] = {-1, -1};
