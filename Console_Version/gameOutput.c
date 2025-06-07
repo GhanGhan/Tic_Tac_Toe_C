@@ -36,7 +36,7 @@ void printCurrentMetrics(bool gameWon, bool gameStaleMate, char board[3][3])
     else if (gameStaleMate)
     {
         gamesPlayed++;
-        printf("The current game of Tic-Tac-Toe ihas ended in a STALEMATE - You guys are both MID!!!!!!");
+        printf("The current game of Tic-Tac-Toe ihas ended in a STALEMATE - You guys are both MID!!!!!!\n");
     }
 
     turns++;

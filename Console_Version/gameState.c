@@ -120,11 +120,12 @@ bool checkStatemate(char board[3][3])
         staleMate = true;
     if(turns == 7) // there is one cell left - MIGHT DECIDE TO LET THEM PLAY IT OUT IN THE FUTURE
     {
+        /*
         char mark = 'X'; //It will always be Player 1s turn
         findRemainingCell(testBoard, &finalRow, &finalColumn);
         testBoard[finalRow][finalColumn] = mark;
         //
-        /*
+        
         printf("Print testboard--------------------\n");
         for(int i = 0; i < SIZE; i++)
         {
@@ -151,22 +152,25 @@ bool checkStatemate(char board[3][3])
 
 
         //Test if both combinations will lead to a stalemate
+        bool winnerList[] = {true, true, true, true};
         for(int option = 0; option < 2; option++)
         {
-            int staleMateList[] = {true, true, true, true};
+            //int staleMateList[] = {true, true, true, true};
             char mark = 'O'; // it will always be player 2's turn next
             testBoard[rowOptions[option]][colOptions[option]] = mark;
-            staleMateList[option] = !checkWinner(testBoard, rowOptions[option], colOptions[option], turns + 1);
+            winnerList[option] = checkWinner(testBoard, rowOptions[option], colOptions[option], turns + 1);
             // Afterwards it will be Player 1's turn
             mark = 'X';
             testBoard[rowOptions[1-option]][colOptions[1-option]] = mark;
-            staleMateList[option + 2] = !checkWinner(testBoard, rowOptions[option], colOptions[option], turns + 2);
+            winnerList[option + 2] = checkWinner(testBoard, rowOptions[option], colOptions[option], turns + 2);
 
-            if(staleMateList[0] == true && staleMateList[1] == true)
-                staleMate = true;
-            else if (staleMateList[0] == true && staleMateList[1] == true && staleMateList[2] == true && staleMateList[3] == true)
-                staleMate = true;
+
         }
+        if(winnerList[0] == false && winnerList[1] == false && winnerList[2] == false && winnerList[3] == false) //stalemate is guaranteed
+            staleMate = true;
+        else // All other cases either player 1 or 2 is guaranteed to win, or stalemate is only possible bt not guarenteed
+            staleMate = false;
+        
     }
 
     return staleMate;

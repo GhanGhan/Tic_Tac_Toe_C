@@ -75,7 +75,7 @@ char* enterData()
     }
     else
     {
-        printf("Player 2's turn, please enter your mark - \"X\", and cell location e.g. \"O 2 1\" \n: ");
+        printf("Player 2's turn, please enter your mark - \"O\", and cell location e.g. \"O 2 1\" \n: ");
         fgets(data, dataSize, stdin); // reads characters untirl reaches dataSize limit, or encounters a new/end-of line character
     }
 
