@@ -20,6 +20,8 @@ void printCurrentMetrics(bool gameWon, bool gameStaleMate, char board[3][3])
         printf("[%c][%c][%c]\n", board[i][0], board[i][1], board[i][2]);
     }
 
+    printf("%d turns have been played!", turns);
+
     if(gameWon)
     {
         gamesPlayed++;
@@ -36,4 +38,6 @@ void printCurrentMetrics(bool gameWon, bool gameStaleMate, char board[3][3])
         gamesPlayed++;
         printf("The current game of Tic-Tac-Toe ihas ended in a STALEMATE - You guys are both MID!!!!!!");
     }
+
+    turns++;
 }
