@@ -69,7 +69,7 @@ bool validateData(char board[3][3], char* playerInput, char* mark, int* row, int
     {
         if(*mark != 'O')
         {
-            printf("It is Player 0's turn, for input to be valid, the mark must be \"X\"\n");
+            printf("It is Player 0's turn, for input to be valid, the mark must be \"O\"\n");
             return false;
         }
     }

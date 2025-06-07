@@ -18,7 +18,7 @@ char newGame()
             scanf(" %c", &key); // function oftens leaves a new line character in stdin after you press enter
             getchar(); //consume new line character in the standard input buffer (stdin)
             if(key != 'G')
-                printf("Invalid input, please enter the character \"G\" \n: \n");
+                printf("Invalid input, please enter the character \"G\" \n: ");
         }
 
         printf("Alright, let's start the game! \n");
