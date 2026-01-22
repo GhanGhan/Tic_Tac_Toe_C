@@ -38,7 +38,7 @@ char newGame()
                 printf("Alright, we will start another game!! \n");
             else if(key == 'Q')
             {
-                printf("Alright, thanks for playing \n");
+                printf("Alright, thanks for playing! \n");
                 exit(0);
             }
             else
@@ -64,7 +64,7 @@ char* enterData()
 
     if(data == NULL)
     {
-        printf("Memory allocatin failed\n");
+        printf("Memory allocation failed\n");
         exit(1);
     }
     // placing getChar after scanf prevents fgets from reading the left-over \n character in the standard input buffer stdin

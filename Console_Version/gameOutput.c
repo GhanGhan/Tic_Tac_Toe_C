@@ -7,7 +7,7 @@
 
 void printSeriesMetrics()
 {
-    printf("A total of %d games of Tic-Tac Toe, including this one, have been played!\n");
+    printf("A total of %d games of Tic-Tac Toe, including this one, have been played!\n", gamesPlayed);
     printf("Player 1 (X) has one %d games.  Player 2 (O) has won %d games.\n", gamesWonX, gamesWonO);
 }
 
