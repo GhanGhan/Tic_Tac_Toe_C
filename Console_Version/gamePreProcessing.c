@@ -96,7 +96,7 @@ bool validateData(char board[3][3], char* playerInput, char* mark, int* row, int
     }
     else //Location has already been filled
     {
-        printf("Entry has already beenn filled, pick a different one!!! \n");
+        printf("Entry has already beenn filled, pick a different position!!! \n");
         return false;
     }
     
